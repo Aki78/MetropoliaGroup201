@@ -74,11 +74,15 @@ Write your abstract here.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|p{1cm}|p{4cm}|c|c|}
 \hline
 \textbf{Ver} & \textbf{Description} & \textbf{Date} & \textbf{Author(s)} \\ \hline
 0.1 & First version created from the Construx's software development plan template. & 9.12.2022 & Sakari Lukkarinen \\ \hline
 0.2 & Continued editing. Added examples and other documents. & 11.12.2022 & Sakari Lukkarinen \\ \hline
+ &  &  &  \\ \hline
+ &  &  &  \\ \hline
+ &  &  &  \\ \hline
+ &  &  &  \\ \hline
 \end{tabular}
 \caption{Version history}
 \label{table:version-history}
@@ -137,12 +141,12 @@ The main deliverables of the project are:
 
 
 The main deliverables, their release dates, physical locations and delivery
-methods are listed in Table 1.
+methods are listed in Table \ref{tab:deliverable}.
 
 \begin{table}[h]
 \centering
 \caption{The main deliverables of the project.}
-\label{tab:my_label}
+\label{tab:deliverable}
 \begin{tabular}{|l|l|l|l|}
 \hline
 \textbf{Main deliverable} & \textbf{Release date} & \textbf{Physical location} & \textbf{Delivery method} \\
@@ -166,7 +170,7 @@ Proof-of-concept product & TBD & TBD & TBD \\
 
 
 \subsection{Evolution of the Project Management Plan}
-The following Table 1 summarises the project management plan showing the
+The following Table \ref{tab:deliverable} summarises the project management plan showing the
 version, primary authors, description and data completed estimates.
 
 \begin{table}[h]
@@ -232,7 +236,7 @@ are described in this chapter.
 \subsection{Process Model}
 A staged delivery plan is followed in the project. A detailed GANTT chart of major
 phases and milestones are given in a separate document \textcolor{red}{(XXX. Project Phases
-and Milestones)}. The following Table 3 summarises the major work products,
+and Milestones)}. The following Table \ref{tab:work_product_status} summarises the major work products,
 their planned completion dates and their content.
 
 [table]
@@ -257,7 +261,7 @@ TBD & TBD & Yes & No & Project manager  \\
 
 \subsection{Organizational Structure and Project Responsibilities}
 Each major project responsibility and the responsible persons are described in
-Table 4.
+Table \ref{tab:project_responsibilities}.
 
 \begin{table}[h]
 \centering
@@ -289,7 +293,7 @@ Etc. & TBD \\
 
 
 The project’s internal structure, the lines of authority, responsibility and
-communication within the project are illustrated in Figure 1 .
+communication within the project are illustrated in Figure \ref{harrin} .
 
 
 \begin{figure*}[h]
@@ -300,7 +304,7 @@ communication within the project are illustrated in Figure 1 .
 \end{figure*}
 
 
-[Chart]
+
 
 \section{Managerial Process}
 The management objectives, priorities, project assumptions, dependencies, constraints, risk management techniques, monitoring and controlling mechanisms, and the staffing plan are described here.
@@ -338,7 +342,7 @@ specification (See Document \textcolor{red}{XXX}). However, any guarantees of th
 implemented features cannot be given, but the results are as-they-are.
 \subsection{Risk Management}
 A separate risk evaluation and management document is given in document \textcolor{red}{XXX}.
-The Table 5 lists the top major risks for the project.
+The Table \ref{tab:project_risks} lists the top major risks for the project.
 
 \begin{table}[h]
 \centering
@@ -428,18 +432,16 @@ on. Note: this section can be added later during the project.}
 \textcolor{red}{Instructions: Create a first draft of work packages and place them here (i.e., task
 or collection of tasks that must be completed to complete the product).
 Identify each work package with a unique number and provide a diagram showing
-the breakdown of work packages into sub-packages (See Figure 2 for example).
+the breakdown of work packages into sub-packages (See Figure \ref{wrike} for example).
 Describe the dependencies both among work packages, and external events.
 Update this part in every stage when the project progresses.}
-
-[Chart Figure]
 
 \begin{figure*}[h]
   \centering
   \includegraphics[width=1.0\textwidth]{wrike_2022.png}
   \caption{  Example of project breakdown into work packages. (Source: Wrike,
 2022). }
-  \label{harrin}
+  \label{wrike}
 \end{figure*}
 
 \subsection{Resource Requirements}
@@ -457,7 +459,26 @@ the project:
 \subsection{Time Budget and Schedule}
 The detailed time budget and schedule is given in document \textcolor{red}{XXX}. The major
 activities and tasks, required calendar dates, and their required milestone and
-deliverable dates are summarised in Table 6.
+deliverable dates are summarised in Table \ref{tab:time_budget}.
+
+\begin{table}[h]
+\centering
+\caption{Time budget and schedule for major project activities and tasks.}
+\label{tab:time_budget}
+\begin{tabular}{|l|c|c|p{2cm}|p{2cm}|}
+\hline
+\textbf{Activity/Task} & \textbf{Begin} & \textbf{End} & \textbf{Required calendar days} & \textbf{Delivery or milestone date} \\
+\hline
+ &  &  &  & \\
+\hline
+ &  &  &  & \\
+\hline
+ &  &  &  & \\
+\hline
+ &  &  &  & \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{Additional Components (optional)}
 
