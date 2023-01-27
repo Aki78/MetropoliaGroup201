@@ -345,5 +345,188 @@ and frequency-domain measures of HRV are summarized in Table 1 and Table 2.
   \label{harrin}
 \end{figure*}
 
+\begin{figure}[h]
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{watch1.png}
+\label{fig:sub1}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{watch2.png}
+\label{fig:sub2}
+\end{minipage}
+\caption{Caption for both figures}
+\label{fig:test}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Selected time-domain measures of HRV [13]}
+\label{tab:HRV}
+\begin{tabular}{llp{7cm}}
+\hline
+\textbf{Variable} & \textbf{Units} & \textbf{Description} \\ \hline
+SDNN & ms & Standard deviation of all NN intervals \\ \hline
+SDANN & ms & Standard deviation of the averages of NN intervals in all 5-minute segments of the entire recording \\ \hline
+RMSSD & ms & The square root of the mean of the sum of the squares of differences between adjacent NN intervals \\ \hline
+SDNN index & ms & Mean of the standard deviations of all NN intervals for all 5-minute segments of the entire recording \\ \hline
+SDSD & ms & Standard deviation of differences between adjacent NN intervals \\ \hline
+NN50 count & ms & Number of pairs of adjacent NN intervals differing by more than 50 ms in the entire recording \\ \hline
+pNN50\% & - & NN50 count divided by the total number of all NN intervals \\ \hline
+HRV triangular index & ms & Total number of all NN intervals divided by the height of the histogram of all NN intervals \\ \hline
+TINN & ms & Baseline width of the minimum square difference triangular interpolation of the highest peak of the histogram of all NN intervals \\ \hline
+Differential index & ms & Difference between the widths of the histogram of differences between adjacent NN intervals measured at selected heights \\ \hline
+Logarithmic index & - & Coefficient $\phi$ of the negative exponential curve $k · e^{-\phi t}$, which is the best approximation of the histogram of absolute differences between adjacent NN intervals \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{Selected frequency-domain measures of HRV [13]}
+\label{tab:HRV_freq}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Units} & \textbf{Description} \\ \hline
+\multicolumn{3}{|c|}{\textbf{Analysis of short-term recordings (5 min)}} \\ \hline
+5min total power & ms$^2$ & The variance of NN intervals over the temporal segment \\ \hline
+VLF & ms$^2$ & Power in VLF range (buffer 0.4 Hz) \\ \hline
+LF & ms$^2$ & Power in LF range (0.04–0.15 Hz) \\ \hline
+LF norm & n.u. & LF power in normalized units (LF/(total power-VLF)×100) \\ \hline
+HF & ms$^2$ & Power in HF range (0.15–0.4 Hz) \\ \hline
+HF norm & n.u. & HF power in normalized units (HF/(total power-VLF)×100) \\ \hline
+LF/HF & - & Ratio LF/HF \\ \hline
+\multicolumn{3}{|c|}{\textbf{Analysis of entire 24 hours}} \\ \hline
+Total power & ms$^2$ & Variance of all NN intervals \\ \hline
+ULF & ms$^2$ & Power in the ULF range (buffer 0.003 Hz) \\ \hline
+VLF & ms$^2$ & Power in the VLF range (0.003–0.04 Hz) \\ \hline
+LF & ms$^2$ & Power in the LF range (0.04–0.15 Hz) \\ \hline
+HF & ms$^2$ & Power in the HF range (0.15–0.4 Hz) \\ \hline
+$\alpha$ & ms$^2$ & Slope of the linear interpolation of the spectrum in a log-log scale \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Component used in the proof-of-concept product.}
+\label{tab:POC_components}
+\begin{tabular}{|l|p{5cm}|}
+\hline
+\textbf{Component} & \textbf{Description} \\ \hline
+Raspberry Pi & Dual-core ARM processor microcontroller having 246 kB SRAM and 2 MB on-board Flash. It also includes 2.4 GHz wireless LAN and 26 multifunction GPIO pins.\\ \hline
+Crowtail Pulse Sensor v2.0 & Optical heart rate sensor with LED, photodiode, analog amplifier, and analog signal output. Operating voltage 3-5 V. \\ \hline
+OLED Display & SSD1306 compatible 128x64 monochrome organic LED-display. Communicates with I2C or UART-protocol. \\ \hline
+Protoboard & Passive protoboard specially designed for this project to help connect the other components to the Raspberry Pi. \\ \hline
+Rotary knob & Digital rotary knob with push button. \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\caption{Component used in the proof-of-concept product.}
+\label{tab:POC_components}
+\begin{tabular}{|l|p{5cm}|l|}
+\hline
+\textbf{Component} & \textbf{Description} & \textbf{More Info} \\ \hline
+Raspberry Pi & Dual-core ARM processor microcontroller having 246 kB SRAM and 2 MB on-board Flash. It also includes 2.4 GHz wireless LAN and 26 multifunction GPIO pins. & Raspberry Pi website \\ \hline
+Crowtail Pulse Sensor v2.0 & Optical heart rate sensor with LED, photodiode, analog amplifier, and analog signal output. Operating voltage 3-5 V. & Elecrow website \\ \hline
+OLED Display & SSD1306 compatible 128x64 monochrome organic LED-display. Communicates with I2C or UART-protocol. & SSD1306 OLED Display datasheet \\ \hline
+Protoboard & Passive protoboard specially designed for this project to help connect the other components to the Raspberry Pi. & N/A \\ \hline
+Rotary knob & Digital rotary knob with push button. & N/A \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\begin{tabular}{|p{4cm}|p{7cm}|}
+\hline
+\textbf{Key Feature} & \textbf{Description} \\
+\hline
+HRV detection & PPG signal is detected using the optical pulse sensor and the heart rate variability is measured using the development board’s MCU. \\
+\hline\
+Display & The system has an OLED display capable of showing both text and graphics. \\
+\hline\
+Controls & The system has a rotary switch control knob with push button. The control knob can be used for controlling the operation of the system. \\
+\hline
+MCU & The system contains an MCU with Flash and RAM memory and several peripheral connections enabling to process the detected PPG signal and calculate the inter-peak-interval variations. \\
+\hline
+Wireless connection & The raw HRV data (PPI) can be further analysed using the system or sent wirelessly to a Cloud Server for further calculations. The system contains a wireless WiFi transmitter. \\
+\hline
+USB connection & The system contains a USB connection. The USB can be used to control, code, and download the executable files. In addition, it can be used to debug the code and download and upload data files. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|p{4cm}|}
+\hline
+\textbf{User} & \textbf{Abbreviation} & \textbf{Description} \\
+\hline
+User & U1 & A person using the device \\
+\hline
+Medical professional & U2 & A medical doctor, nurse or other medical professional interpreting the results \\ \hline
+System administrator & U3 & A technical person responsible for the system administration \\ \hline
+Other role & Un & \\
+\hline
+\end{tabular}
+\caption{User roles}
+\label{tab:X3}
+\end{table}
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{ID} & \textbf{Name} & \textbf{User role(s)} & \textbf{Importance} & \textbf{Links to requirements} & \textbf{Links to use cases} \\
+\hline
+UC01 & Recording new HRV analysis & U1: User & 1 & FR01 & \\
+\hline
+UC02 & & & & & \\
+\hline
+UC03 & Reading previous HRV analysis & U1: User & 1 & FR02 & UC01 \\
+\hline
+\end{tabular}
+\caption{Use cases}
+\label{tab:my_label}
+\end{table}
+
+\begin{table}[h]
+\caption{Table X5. Use Cases.}
+\label{table:X5}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Use case ID} & UC01 \\
+\textbf{Name} & Recording new HRV analysis \\
+\textbf{Author and date} & Sakari Lukkarinen, 2.12.2022 \\
+\textbf{User roles} & U1: User \\
+\textbf{Importance} & 1 \\
+\textbf{Links and sources} & FR01 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Prerequisites:} The system is on and ready to record.
+
+\textbf{Description:}
+1. User selects new recording from the system.
+2. User attaches the sensor on the skin.
+3. User starts the recording. The system records the signal.
+4. Recording period is over and the signal is analysed.
+5. The results are shown on the display.
+
+\textbf{Exceptions:}
+1. The signal is low quality or the sensor is not properly on the skin. The user is warned about the situation and asked to restart recording.
+2. After the recording the signal is too low quality. The user is warned about the situation and the results are not stored.
+
+\textbf{Final result:} The HRV analysis is ready and shown to the user.
+
+\textbf{Other requirements:} None.
 
 \end{document}
