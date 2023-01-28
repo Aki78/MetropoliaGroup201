@@ -21,6 +21,7 @@
 
 \begin{center}
 \includegraphics[scale=0.2]{logo.png}
+
 \end{center}
 
 \vspace{0.5cm}
@@ -115,7 +116,7 @@ The state of the autonomous nervous system (ANS) can be estimated from the heart
 variation. Nowadays most of the wearable activity tracking devices and sports watches
 detect the heart rate and its variability either electrically (e.g. detecting the electrocardiogram
 or some parts of its signal) or optically (e.g. optical heart rate detector or oxygen saturation
-detectors). [1]
+detectors). \ref{cleveland_clinic_2021}
 Heart rate variability (HRV) is an accurate method to assess the autonomic nervous system
 (ANS) function. HRV is widely used by health and wellbeing professionals to objectively
 measure the physiological and mental stress and recovery. In addition, HRV is a commonly
@@ -190,7 +191,12 @@ tension” [4]. According to the American Institute of Stress [5] [6]:
 \item 33 \% of people report feeling extreme stres
 \end{itemize}
 
-[Figure]
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{sick.png}
+  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
+  \label{harrin}
+\end{figure*}
 
 Physiological or mental imbalance can induce stress. Our autonomic nervous system (ANS)
 quickly responds with physiological changes through our sympathetic (SNS) and
@@ -212,7 +218,14 @@ include RR interval (RRI) variability, where R corresponds to the peak of QRS-co
 electrocardiography (ECG), and Peak-to-Peak interval, if the HRV is measured optically.
 Figure 2 visualizes heart HRV with R-R interval changes. [10]
 
-[Figure]
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{heart_rate.png}
+  \caption{ Heart rate variability (HRV) calculated from the R-R intervals (RRI) [10].}
+  \label{harrin}
+\end{figure*}
+
 
 Heart rate variability can be detected with various methods. ECG is considered the golden
 standard for HRV measurement [10]. Other methods are photoplethysmography (PPG),
@@ -220,7 +233,23 @@ which detects the heart rate variability optically, usually measured from finger
 forehead or earlobes, blood pressure or ballistocardiography, which measures small
 changes in body’s weight when the blood flows from the heart to the aorta.
 
-[Figure]
+Figure 3 shows a typical fitness and wellness watch having an optical heart rate sensor [11].
+The light emitting diodes (LEDs) and optical detectors are seen on the back of the watch.
+
+\begin{figure}[h]
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{watch1.png}
+\label{fig:sub1}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{watch2.png}
+\label{fig:sub2}
+\end{minipage}
+\caption{ An example of fitness and wellness watch having an optical heart rate sensor. [11]}
+\label{fig:test}
+\end{figure}
+
+
 
 Figure 4 shows an example of photoplethysmography signal recorded with wrist worn pulse
 oximetry [12]. The device is shown on the left. The sensor is attached to the thumb. The
@@ -228,7 +257,19 @@ PPG signal is shown on the right. The inter-beat-interval (IBI) is calculated fr
 peaks (the bottoms) of the PPG signal. It could be calculated also from the positive peaks
 (the maximum) or from the rising edges of the signal.
 
-[Figure]
+
+\begin{figure}[h]
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{hand.png}
+\label{fig:sub1}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{ppg_signal.png}
+\label{fig:sub2}
+\end{minipage}
+\caption{Caption for both figures}
+\label{fig:test}
+\end{figure}
 
 \subsection{Heart rate variability}
 At present there is no accepted standard for stress evaluation. However, several HRV
@@ -240,123 +281,6 @@ Electrophysiology have defined and established the standards for the measurement
 physiological interpretation, and clinical use of HRV [13]. Most used selected time-domain
 and frequency-domain measures of HRV are summarized in Table 1 and Table 2.
 
-\subsection{Recovery and stress indexes}
-
-\section{Description of the target state}
-\subsection{The purpose}
-\subsection{Application concept}
-\subsection{Operating principle}
-\subsection{Key features}
-\subsection{Use and users}
-\subsection{Applications}
-
-\section{Functional requirements}
-
-\section{Non-functional requirements}
-
-\section{Use cases}
-\subsection{User roles}
-\subsection{Use cases and use case diagram}
-\subsection{Detailed description of the use cases}
-
-\label{sec:references}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{sick.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{screenshot2.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{screenshot.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{raspi_heart.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{sympathetic2.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{heart_rate.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{hand.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{watch1.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{watch2.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-\begin{figure*}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{web_server.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
-  \label{harrin}
-\end{figure*}
-
-\begin{figure}[h]
-\begin{minipage}{0.5\textwidth}
-\includegraphics[width=\linewidth]{watch1.png}
-\label{fig:sub1}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\includegraphics[width=\linewidth]{watch2.png}
-\label{fig:sub2}
-\end{minipage}
-\caption{Caption for both figures}
-\label{fig:test}
-\end{figure}
 
 \begin{table}[h]
 \centering
@@ -378,6 +302,7 @@ Differential index & ms & Difference between the widths of the histogram of diff
 Logarithmic index & - & Coefficient $\phi$ of the negative exponential curve $k · e^{-\phi t}$, which is the best approximation of the histogram of absolute differences between adjacent NN intervals \\ \hline
 \end{tabular}
 \end{table}
+
 
 
 \begin{table}[h]
@@ -404,6 +329,90 @@ HF & ms$^2$ & Power in the HF range (0.15–0.4 Hz) \\ \hline
 $\alpha$ & ms$^2$ & Slope of the linear interpolation of the spectrum in a log-log scale \\ \hline
 \end{tabular}
 \end{table}
+
+\subsection{Recovery and stress indexes}
+Based on the common measures of HRV, special indexes representing the parasympathetic
+and sympathetic cardiac activity have been developed. For example, Kubios HRV software
+is based on the following parameters to calculate PNS and SNS indexes [14]:
+
+
+\begin{itemize}
+\item Mean RR interval
+\item Root mean square of successive RR interval differences (RMSSD)
+\item Poincaré plot index SD1 and SD2 in normalized units
+\item Baevsky’s stress index (SI)
+\end{itemize}
+
+abc
+
+Each parameter is compared to their normal population values and the values are then
+scaled with standard deviations (SD) of normal population and finally a proprietary weighting
+is applied to obtain the index values. These are illustrated in Figure 5 and Figure 6.
+
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{parasympathetic.png}
+  \caption{Parasympathetic nervous system (PNS) index. High positive values are interpreted as a good recovery
+of the test subject. Source: [14]}
+  \label{harrin}
+\end{figure*}
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{sympathetic2.png}
+  \caption{Sympathetic nervous system (SNS) index. High negative values are interpreted as a low stress of the
+test subject. Source: [14]}
+  \label{harrin}
+\end{figure*}
+
+\section{Description of the target state}
+
+\subsection{The purpose}
+The aim is to develop a working proof-of-concept of the recovery and stress meter. A
+suitable microcontroller board and additional components are used. The Raspberry Pi Pico
+was selected for that purpose, as the Raspberry Pi products are extensively supported by
+the manufacturers and by the user community.
+Metropolia University of Applied Sciences’ teaching personnel together with senior students
+have evaluated and selected the hardware components for the project. In addition, a special
+board for development of IoT devices with Raspberry Pi Pico is designed and tested by one
+of the senior lecturers. The background development and research results are openly
+available and readable in Theseus [16] [17] [18].
+ABC
+
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{raspi_heart.png}
+  \caption{Photograph of the development board with connected Raspberry Pi Pico board, OLED display and
+optical heart rate sensor.}
+  \label{harrin}
+\end{figure*}
+
+ABC
+
+\subsection{Application concept}
+The core of the proof-of-concept is Raspberry Pi Pico, a small and versatile microcontroller
+board designed for IoT devices. The device is adaptable to a wide range of applications in
+home, hobby, education, and industry. It is programmable both in C and MicroPython, of
+which MicroPython is used for this project. The device has a rich set of peripherals, including
+SPI, I2C, and programmable I/O state machines for custom peripheral support. It has also a
+wireless version having a fully certified wireless LAN module. [19]
+
+ABC
+
+The development board is shown in Figure 7. On the bottom left the rotary switch
+and knob is shown. Above it is a 128x64 wide OLED display. At the upper left corner 3 LEDs
+and two of the three micro buttons are shown, which can be used for interacting with the
+development board. In the middle, the Raspberry Pi Pico board with soldered pins is shown.
+
+
+The Pico board is connected to the laptop or desktop through a USB-cable (black cable at
+the top of the figure). On the right, 4-pin Grove-connectors for connecting serial
+communication devices, like I2C sensors or analog input sensors, are shown. The optical
+heart rate sensor is connected to an ADC\_0 pin and is shown above the development board.
+The components used in the proof-of-concept product are listed in Table 3.
+
 
 \begin{table}[h]
 \centering
@@ -437,6 +446,41 @@ Rotary knob & Digital rotary knob with push button. & N/A \\ \hline
 \end{tabular}
 \end{table}
 
+\subsection{Operating principle}
+
+The heart rate is detected using the optical heart rate sensor (Pulse Sensor v2.0, Crowtail)
+[20]. The analog signal is converted into digital using Raspberry Pi Pico’s AD-converters.
+The heart rate is calculated using peak-detection algorithms for photoplethysmography
+(PPG) signals using Pico’s central processing unit (CPU). The operation can be controlled
+using the rotary switch and knob. Results and feedback to the user are shown on the OLED
+display. In addition, the extra LEDs can be used to indicate, for example, the quality of the
+signal or the data collection operations to the user.
+The data is preprocessed with Pico. Pico’s wireless connection can be used to send the data
+to a cloud server and return the analysis results to the development board and show them to
+the user. Figure 88 illustrates the cloud and web-server architecture of the system.
+
+ABC
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{web_server.png}
+  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
+  \label{harrin}
+\end{figure*}
+
+ABC
+
+The development board acquires and records the optical heart pulse data and preprocesses
+the data as seen in Figure 8. All heart rate calculations can be also processed in the
+development board. The time stamped preprocessed pulse data is sent wirelessly to the
+base station which sends the data to the Web server. The data is stored in the webserver’s
+database where more analysis and reporting can be done. The health care professional
+interacts with the webserver through Web clients.
+
+\subsection{Key features}
+The following Table 4. recaps the key features of the system.
+
+ABC
+
 
 \begin{table}
 \begin{tabular}{|p{4cm}|p{7cm}|}
@@ -458,6 +502,88 @@ USB connection & The system contains a USB connection. The USB can be used to co
 \end{tabular}
 \end{table}
 
+\subsection{Use and users}
+The final system is intended to be used for measuring the recovery and stress index based
+on HRV analysis detected optically from the finger, wrist, hand palm, arm, upper arm, chest,
+cheek, forehead, or earlobe.
+The system is intended to be used by a person, patient, customer, or healthcare professional
+aiming to measure the subject’s recovery and stress index. The information can be used to
+help understand the study subject’s current situation. The system is used in a normal dry
+home or office environment.
+
+ABC
+
+\subsection{Applications}
+
+The system can be used to analyze the psychophysiological state. HRV is related to
+emotional arousal, conditions of acute time pressure and emotional strain, and elevated
+anxiety state. HRV has also been shown to be reduced in individuals reporting to worry
+more. In individuals with post-traumatic stress disorder (PTSD), HRV is reduced. [10]
+
+ABC
+
+
+\section{Functional requirements}
+
+ABC
+
+The functionality of the device will be based on functional requirements, i.e. what the system
+will contain and what it will not contain. This chapter presents the essential functional
+requirements related to the system.
+The original table is maintained in Excel and is attached to the document, making it easier to
+structure the data. A snapshot of the table is shown here.
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{screenshot.png}
+  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
+  \label{harrin}
+\end{figure*}
+
+ABC
+
+
+\section{Non-functional requirements}
+
+ABC
+
+Non-functional requirements define the limitations and boundary conditions for functional
+requirements. Non-functional requirements may relate to, for example, security and privacy,
+scale, performance and response time, operating languages and localization, execution
+environment, implementation techniques and languages, as well as compliance with
+standards, usability, responsiveness, documentation, rights to implementation, and
+customizability and accessibility of the implementation.
+This chapter presents the essential non-functional requirements related to the system.
+The original table is maintained in Excel and is attached to the document, making it easier to
+structure the data. A snapshot of the table is shown here.
+The minimal sampling rate of the PPG for accurate pulse rate variability parameters in
+healthy volunteers is 50 Hz. For monitoring the average heart rate, 5 Hz sampling frequency
+can be sufficient. Correct HRV analysis requires higher sampling rates. Interpolation can
+improve HRV accuracy from lower temporal resolution PPGs. [21]
+
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{screenshot2.png}
+  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
+  \label{harrin}
+\end{figure*}
+
+
+ABC
+
+
+\section{Use cases}
+
+ABC
+
+
+
+ABC
+
+
+\subsection{User roles}
+Table X3 summarizes the different user roles.
 
 
 \begin{table}[h]
@@ -477,7 +603,17 @@ Other role & Un & \\
 \label{tab:X3}
 \end{table}
 
+ABC
 
+\subsection{Use cases and use case diagram}
+Table X4 presents the application use cases and ties them to the previously presented user
+roles. Table X4 also prioritizes (1=mandatory, 2=important, 3=useful) the use cases,
+explains the interfaces to functional and non-functional requirements, and presents
+dependencies on other use cases. For a more detailed description of the use cases, see
+Section 7.3
+
+
+ABC
 
 
 \begin{table}[h]
@@ -496,6 +632,15 @@ UC03 & Reading previous HRV analysis & U1: User & 1 & FR02 & UC01 \\
 \caption{Use cases}
 \label{tab:my_label}
 \end{table}
+
+
+\subsection{Detailed description of the use cases}
+Table X3 summarizes the different user roles.
+
+
+ABC
+
+
 
 \begin{table}[h]
 \caption{Table X5. Use Cases.}
@@ -528,5 +673,45 @@ UC03 & Reading previous HRV analysis & U1: User & 1 & FR02 & UC01 \\
 \textbf{Final result:} The HRV analysis is ready and shown to the user.
 
 \textbf{Other requirements:} None.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{unsrt}
+
+\bibliography{references}
+
 
 \end{document}
