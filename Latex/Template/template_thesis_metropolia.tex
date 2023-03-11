@@ -28,7 +28,7 @@
 
 \begin{center}
 
- Team's name: FamilyName1, FamilyName2, FamilyName3, FamilyName4 \\
+ Group 201: Amir Ghari, Heejin Kim, Aleskanteri Merilainen, Eiaki Morooka \\
 
 \vspace{0.5cm}
 
@@ -75,11 +75,13 @@ Write your abstract here.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|p{1cm}|p{4cm}|c|c|}
+\begin{tabular}{|p{1cm}|p{4cm}|c|p{4cm}|}
 \hline
 \textbf{Ver} & \textbf{Description} & \textbf{Date} & \textbf{Author(s)} \\ \hline
-0.1 & First version created from the Construx's software development plan template. & 9.12.2022 & Sakari Lukkarinen \\ \hline
-0.2 & Continued editing. Added examples and other documents. & 11.12.2022 & Sakari Lukkarinen \\ \hline
+1.0 & Created structure for the project plan. Added instructions for what should be included in the various parts of the document.   & 31.1.2023 & Saana Vallius \\ \hline
+1.1 & Review meeting. Notes are shown with yellow.  & 6.2.2023 & Joseph Hotckiss,  Keijo Lanskinnas, Saana Vallius, Miguel Cheneuer, Sakari Lukkarinen \\ \hline
+1.2 & Updated commented parts according to what was decided in the review meeting. Changed the name of the document. & 7.3.2023 & Saana Vallius \\ \hline
+1.3 &  Removed mentions of adding teachers to Teams workspace. & 9.3.2023 & Saana Vallius \\ \hline
  &  &  &  \\ \hline
  &  &  &  \\ \hline
  &  &  &  \\ \hline
@@ -104,396 +106,177 @@ Keyword 1\\ Keyword 2 \\ Keyword 3 \\
 
 \tableofcontents
 
+\newpage
+
 \section{Introduction}
-This section describes the recovery and stress meter project being to be
-conduct during the first year Hardware courses of School of ICT at Metropolia
-University of Applied Sciences.
+This document is a project plan that details the development of a heart rate detection and analysis system by Group 1, a team of 1st year students at Metropolia University of Applied Sciences, School of ICT. The system will use photoplethysmography (PPG) technology to measure blood volume changes in the microvascular bed of tissue to determine a user's heart rate and heart rate variability (HRV). The plan covers the project's objectives, timeline, team roles, communication methods, and the hardware components used to build the system.
+
+The project aims to create a device that can be used in home or office environments by end-users or health and wellbeing professionals, such as physiotherapists, nurses, or medical doctors. The project is part of a course curriculum that involves utilizing the Raspberry Pi Pico microcontroller board and other components to develop a proof-of-concept for the recovery and stress meter.
+
+The development of the heart rate detection and analysis system focuses on five main objectives, including developing a heart rate detection algorithm, calculating HRV analysis, enabling the device to send, store, and read HRV data, building a connection to Kubios Cloud HRV analysis service, and developing a feature that shows estimated stress and recovery status indexes on the device.
+
+The project is scheduled to be completed by May 5th, following a timeline consisting of five stages, including Discover, First stage, Second stage, Third stage, and Final release. The team plans to cultivate various skills during this project, including utilizing the knowledge gained in Hardware 1 and Network classes, understanding programming for implementing hardware products by using Micropython, improving IT documentation writing skills, and improving communication skills. The team plans to use various communication tools and methods, including in-person and online meetings, Discord, GitLab, and Microsoft Teams, to ensure good group communication and proper version control of project-related materials.
+
+
+\subsection{Project Description}
+
+The project aims to create a heart rate detection and analysis system that utilizes photoplethysmography (PPG) technology to measure blood volume changes in the microvascular bed of tissue. By detecting changes in blood volume, the system can determine a user's heart rate and heart rate variability (HRV).
 
 
 
-\subsection{Project Overview and Vision}
-The objective of the project is to create a proof-of-concept product of a stress and
-recovery meter. The project begins with the discovery phase, where the
-requirement specification is reviewed, the project plan is developed with detailed
-schedule and risk management plans. The planning checkpoint review is
-arranged at the beginning of the 4th learning period starting in the middle of
-March.
-
-In the 4th learning period, the project continues to the invention phase where the
-architecture of the system and detailed design are planned. The actual
-implementation work is divided into three (3) iterative development stages each
-of them having a separate release and milestones. The final release is at the end
-of the spring semester.
-
-During the development the project plan with time schedules and risk
-management are updated under change and version control.
-
-
-\subsection{Project Deliverables}
-The main deliverables of the project are:
-\begin{itemize}
-\item The updated and detailed requirement specification
-\item The project plan (this document)
-\item Architecture and detailed design document (to be developed in the 4th period)
-\item The proof-of-concept product (the product)
-\item User's manual for the product
-\item documented source codes.
-\end{itemize}
-
-
-The main deliverables, their release dates, physical locations and delivery
-methods are listed in Table \ref{tab:deliverable}.
-
-\begin{table}[h]
-\centering
-\caption{The main deliverables of the project.}
-\label{tab:deliverable}
-\begin{tabular}{|l|l|l|l|}
-\hline
-\textbf{Main deliverable} & \textbf{Release date} & \textbf{Physical location} & \textbf{Delivery method} \\
-\hline
-Detailed requirement specification & TBD & TBD & TBD \\
-\hline
-Project plan & TBD & TBD & TBD \\
-\hline
-Architecture design & TBD & TBD & TBD \\
-\hline
-Detailed design & TBD & TBD & TBD \\
-\hline
-User’s manual & TBD & TBD & TBD \\
-\hline
-Source code and its documentation & TBD & TBD & TBD \\
-\hline
-Proof-of-concept product & TBD & TBD & TBD \\
-\hline
-\end{tabular}
-\end{table}
-
-
-\subsection{Evolution of the Project Management Plan}
-The following Table \ref{tab:deliverable} summarises the project management plan showing the
-version, primary authors, description and data completed estimates.
-
-\begin{table}[h]
-\centering
-\caption{Project management plan.}
-\label{tab:project_management_plan}
-\begin{tabular}{|l|p{2cm}|p{7cm}|p{2cm}|}
-\hline
-\textbf{Version} & \textbf{Primary author(s)} & \textbf{Description} & \textbf{Date completed} \\
-\hline
-Draft & & Initial draft created for distribution and review comments & TBD \\
-\hline
-Preliminary & & Second draft incorporating initial review comments distributed for final review & TBD \\
-\hline
-Final & & First complete draft, which is placed under change control & TBD \\
-\hline
-Revision 1 & & Revised draft, revised according to the change control process and maintained under change control & TBD \\
-\hline
-Revision 2 & & Second revision, revised according to the change control process and maintained under change control & TBD \\
-\hline
-Revision 3 & & Third revision, revised according to the change control process and maintained under change control & TBD \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Reference Materials}
-Below is listed all the documents and other materials referenced in this document.
-
-Documents
-\begin{itemize}
-\item Requirements Specifications (v0.7), 11.12.2022, Author(s): Sakari Lukkarinen, Word document.
-\item Requirements Specifications, Functional and non-functional requirements, user roles and use cases (v0.7), 11.12.2022, Author(s): Sakari Lukkarinen, Excel document.
-\item Gantt timetable (v0.2), 11.12.2022, Author(s): Sakari Lukkarinen, Excel document.
-\item Risk evaluation and management, Last update 11.12.2022, Author(s): Sakari Lukkarinen, Excel document.
-\end{itemize}
-
-
-Other materials
-\begin{itemize}
-\item McConnell, S. (1998). Software Project Survival Guide. MicroSoft Press.
-\item Harrin, E. (2017). How to Create a Project Organization Chart. ProjectManagement.com
-\item Wikipedia, Product-based planning in Project management. Accessed 11.12.2022.
-\item Wikipedia, PRINCE2. Projects in controlled environments a structured project management method. Accessed 11.12.2022.
-\item Wrike, What Is a Work Package in Project Management? wrike.com. Accessed 11.12.2022.
-\end{itemize}
-
-\subsection{Definitions and Acronyms}
-
-TBD.
-
-\textcolor{red}{Instructions: Provide definitions or references to all the definitions of the special terms and acronyms used within this document.}
-
-\textcolor{red}{This could probably be also done on the beginning of the article.}
-
-\section{Project Organization}
-A staged delivery plan is followed having at least 3 stages and the final release.
-The project’s process model, organizational structure (chain of command and
-management reporting structure), and responsibilities of individuals on the project
-are described in this chapter.
+To achieve this goal, the project will focus on five main objectives. First, the team will develop a heart rate detection algorithm that can work locally on the device. This will allow the system to provide accurate heart rate measurements without requiring an internet connection.
 
 
 
-\subsection{Process Model}
-A staged delivery plan is followed in the project. A detailed GANTT chart of major
-phases and milestones are given in a separate document \textcolor{red}{(XXX. Project Phases
-and Milestones)}. The following Table \ref{tab:work_product_status} summarises the major work products,
-their planned completion dates and their content.
-
-[table]
-\begin{table}[h]
-\centering
-\caption{ Major work products and their content and timing.}
-\label{tab:work_product_status}
-\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2.2cm}|}
-\hline
-\textbf{Work product name} & \textbf{Planned completion date} & \textbf{Placed under change control} & \textbf{Deliverable to customer} & \textbf{Approved by} \\
-\hline
-TBD & TBD & Yes & No & Project manager  \\
-\hline
- TBD & TBD & No & Yes & Engineering lead  \\
-\hline
- TBD & TBD & Yes & Yes & Documentation  \\
-\hline
-\end{tabular}
-\end{table}
-
-\textcolor{red}{Instructions: consider including all the top-level work products.}
-
-\subsection{Organizational Structure and Project Responsibilities}
-Each major project responsibility and the responsible persons are described in
-Table \ref{tab:project_responsibilities}.
-
-\begin{table}[h]
-\centering
-\caption{Project responsibilities and persons responsible.}
-\label{tab:project_responsibilities}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Responsibility} & \textbf{Persons responsible} \\
-\hline
-Overall Project Manager & TBD \\
-\hline
-Engineering Manager & TBD \\
-\hline
-Quality Assurance Manager & TBD \\
-\hline
-End-User Documentation Manager & TBD \\
-\hline
-Requirements Development & TBD \\
-\hline
-Software Architecture & TBD \\
-\hline
-Technical Self-Review & TBD \\
-\hline
-Etc. & TBD \\
-\hline
-\end{tabular}
-\end{table}
+Second, the team will work on calculating HRV analysis using the data collected by the PPG sensor. HRV is a measure of the variation in time between each heartbeat, and it can provide valuable information about a user's health and stress levels.
 
 
 
-The project’s internal structure, the lines of authority, responsibility and
-communication within the project are illustrated in Figure \ref{harrin} .
 
+
+
+
+Third, the team will enable the device to send, store, and read HRV data to/from a server. This will allow users to access their data from different devices and locations, as well as enable health and wellbeing professionals to remotely monitor their clients' HRV data.
+
+
+
+Fourth, the team will build a connection to Kubios Cloud HRV analysis service. This service provides more detailed HRV analysis and can help users and professionals to better understand their HRV data.
+
+
+
+Finally, the team will develop a feature that shows estimated stress and recovery status indexes on the device. This will enable users to monitor their stress levels and recovery status in real-time and adjust their lifestyle accordingly.
+
+
+
+The device is intended for use in home or office environments and can be used by end-users or health and wellbeing professionals such as physiotherapists, nurses, or medical doctors. The Raspberry Pi Pico microcontroller board and other components will be used to develop a proof-of-concept for the recovery and stress meter. The Raspberry Pi products are extensively supported by the manufacturers and by the user community, making them a suitable choice for this project.
+
+Figure 1 shows Raspberry Pi version….
 
 \begin{figure*}[h]
   \centering
   \includegraphics[width=0.7\textwidth]{harrin_2017.png}
-  \caption{ Example of project's organisational chart (Source: Harrin, 2017).}
+  \caption{ Current Raspberry pi pico and its accessories.}
   \label{harrin}
 \end{figure*}
 
 
 
+\section{Hardware}
 
-\section{Managerial Process}
-The management objectives, priorities, project assumptions, dependencies, constraints, risk management techniques, monitoring and controlling mechanisms, and the staffing plan are described here.
-
-
+To develop the heart rate detection and analysis system, the main hardware component being used is the Raspberry Pi Pico, which is a versatile microcontroller board designed for IoT devices. The board is small and adaptable to a wide range of applications in home, hobby, education, and industry. It has a rich set of peripherals, including SPI, I2C, and programmable I/O state machines for custom peripheral support. For this project, the board is programmable using MicroPython.
 
 
-\subsection{Management Objectives and Priorities}
-The project is managed following the product-based planning and PRINCE2
-structured project management method (See other documents for details).
-\textcolor{red}{Instructions: Describe the philosophy, goals, and priorities for management
-during the project. Consider including the following items:}
-
-\begin{itemize}
-\item {\color{red}status reporting}
-\item {\color{red}relative priorities among functionality, schedule, and budget}
-\item {\color{red}risk management procedures}
-\item {\color{red}approach to modifying existing software}
-\end{itemize}
-
-\subsection{Assumptions, Dependencies, and Constraints}
-The project plan is based on the given preliminary requirement specification and
-documents (See 1.4 Reference Materials).
-The project’s schedule is constrained to the Spring 20\textcolor{red}{XX} semester, which ends
-at \textcolor{red}{XX.XX.20XX}. Totally \textcolor{red}{XX} engineering students are involved on the project
-development process.
-The project’s time budget is based on the ECTS system. Each ECTS point is
-budgeted for 27 hours of study work. Totally \textcolor{red}{XXX} hours of engineering students’
-workhours are used for the project.
-The quality measures of the project are being updated during the project. The
-quality of the final proof-of-concept is constrained by the given schedule, time
-budget, and human resources. Based on these constraints, the proof-of-concept
-product is planned to have the functionalities given in the detailed requirement
-specification (See Document \textcolor{red}{XXX}). However, any guarantees of the quality of the
-implemented features cannot be given, but the results are as-they-are.
-\subsection{Risk Management}
-
-A separate risk evaluation and management document is given in document \textcolor{red}{XXX}.
-The Table \ref{tab:project_risks} lists the top major risks for the project.
-
-\begin{table}[h]
 
 
-\centering
-\caption{Major identified and evaluated risks of the project. \textcolor{red} {Instructions: copy
-here the initial top 10 risk list and update the table at major milestones of the
-project. }}
-
-\label{tab:project_risks}
-\begin{tabular}{|c|l|c|c|c|}
-\hline
-\textbf{ID} & \textbf{Description} & \textbf{Severity} & \textbf{Likelihood} & \textbf{Risk level} \\
-\hline
-R\_01 & Unachieavable schedule & 3 & 3 & \cellcolor{yellow} 9 \\
-\hline
-R\_02 & Released product has low quality & 2 & 4 & \cellcolor{yellow} 8 \\
-\hline
-R\_03 & Requirements or developer gold plating & 2 & 2 & \cellcolor{lightgreen} 4 \\
-\hline
-R\_04 & Creeping requirements & 1 & 3 & \cellcolor{lightgreen} 3 \\
-\hline
-R\_05 & Unstable tools delay schedule & 1 & 1 & \cellcolor{green} 1 \\
-\hline
-R\_06 & TEST very high risk & 4 & 4 & \cellcolor{red} 16 \\
-\hline
-R\_07 & TEST very low risk & 1 & 1 & \cellcolor{green}  1 \\
-\hline
-R\_08 & TEST another very high risk & 4 & 4 & \cellcolor{red} 16 \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Monitoring and Controlling Mechanisms}
-The project shedule, quality and functionality are tracked through the project. The
-report content and format follows .... \textcolor{red}{Instructions: describe here the report content and format}.
-
-\vspace{0.5cm}
-
-The monitoring report is structured the following way ... \textcolor{red}{ Instructions: write here
-the report structure} and they are delivered every  \textcolor{red}{XXX} week.
-
-\vspace{0.5cm}
-
-The project progress is controlled ... \textcolor{red}{Instructions: write here how the project progress is controlled}.
-
-\subsection{Staffing Plan}
-
-\textcolor{red}{Instructions: Describe the numbers and types of personnel needed to conduct the
-project, for example: NN engineering students with ... skill levels are required.
-The project starts at ...... and continues XXX weeks. The personnel are selected
-by (method of obtaining the personnel), and (what?) training is required. All staff
-is phased out at the end of the project.}
-
-\section{Technical Process}
-The top-level technical processes used on the project including the technical
-methods, tools, and techniques; major software documents; and supporting
-activities such as configuration management and quality assurance are described
-in this chapter.
-
-\subsection{Methods, Tools and Techniques}
-The following methods, tools and techniques are used in the project {\color{red} (see the
-requirement specification for more details):
 
 
-\begin{itemize}
-\item The computing system environment including hardware and operating system environment: ....
-\item Software tools including design tools, source code control, time accounting, compiler or IDE, debugging aids, defect tracking, and so on: ...
-\item Development methodologies including requirements development practices, design methodologies and notations, programming language, coding standards, documentation standards, system integration procedure, and so on (these will not all be defined when the first draft of the project plan is created; the section should be updated as the plans become more detailed)
-\item Quality assurance practices including methods of technical peer review, unit testing, stepping through code in a debugger, system testing, automated regression tests, and so on: ....
-\end{itemize}
-}
 
-\subsection{Documentation}
-The following documents will be developed for the project:
+Additionally, there is a wireless version of the board, Raspberry Pi Pico W, which includes a certified wireless LAN module.
 
-\textcolor{red}{Instructions: List here all the major documents ...}
 
-\subsection{Project Support Functions (optional)}
-\textcolor{red}{
-Instructions: Describe here or give references to other documents that describe
-the plans for functions that support the software development effort, including
-configuration management, quality assurance, and end user documentation.
-Describe the responsibilities, resource requirements, schedule, budget, and so
-on. Note: this section can be added later during the project.}
 
-\section{Work Packages, Schedule, and Budget}
-\subsection{Work Packages and their dependencies}
-\textcolor{red}{Instructions: Create a first draft of work packages and place them here (i.e., task
-or collection of tasks that must be completed to complete the product).
-Identify each work package with a unique number and provide a diagram showing
-the breakdown of work packages into sub-packages (See Figure \ref{wrike} for example).
-Describe the dependencies both among work packages, and external events.
-Update this part in every stage when the project progresses.}
+The development board used in the project includes a rotary switch and knob, a 128x64 OLED display, 3 LEDs, and two of the three micro buttons for interacting with the board. The board is connected to a laptop or desktop via USB cable, and it includes 4-pin Grove-connectors for connecting serial communication devices such as I2C sensors or analog input sensors. The optical heart rate sensor is connected to one of the Grove-connectors and Pico’s ADC\_0 pin.
+
+
+
+Overall, the Raspberry Pi Pico board and associated components provide a flexible and customizable platform for developing the heart rate detection and analysis system. A full list of the components used in the proof-of-concept product is provided in Table 1:
+
+% TABLE
+
 
 \begin{figure*}[h]
   \centering
-  \includegraphics[width=1.0\textwidth]{wrike_2022.png}
-  \caption{  Example of project breakdown into work packages. (Source: Wrike,
-2022). }
-  \label{wrike}
+  \includegraphics[width=0.7\textwidth]{harrin_2017.png}
+  \caption{Block diagram of the device}
+  \label{harrin}
 \end{figure*}
 
-\subsection{Resource Requirements}
-The following resources are required for the project on over the whole course of
-the project:
-{\color{red}
-\begin{itemize}
-\item The numbers and type of personnel: ...
-\item Number of computers and software used: ...
-\item Office facilities used: ...
-\item Training needed: ...
-\end{itemize}
-}
 
-\subsection{Time Budget and Schedule}
-The detailed time budget and schedule is given in document \textcolor{red}{XXX}. The major
-activities and tasks, required calendar dates, and their required milestone and
-deliverable dates are summarised in Table \ref{tab:time_budget}.
+\section{Communication}
+Good group communication will be key to a successful project. Therefore, Group201 will communicate using a variety of methods and communication technology tools.
 
-\begin{table}[h]
-\centering
-\caption{Time budget and schedule for major project activities and tasks.}
-\label{tab:time_budget}
-\begin{tabular}{|l|c|c|p{2cm}|p{2cm}|}
-\hline
-\textbf{Activity/Task} & \textbf{Begin} & \textbf{End} & \textbf{Required calendar days} & \textbf{Delivery or milestone date} \\
-\hline
- &  &  &  & \\
-\hline
- &  &  &  & \\
-\hline
- &  &  &  & \\
-\hline
- &  &  &  & \\
-\hline
-\end{tabular}
-\end{table}
+Primarily, the group will meet in-person and online. During the meetings, we share progress, discuss what the next tasks should be, distribute new tasks, and create a schedule for the next meeting. After each meeting, the group creates 'Meeting Notes' to help group members understand and review the discussions that took place. These notes are used to guide the members’ independent work and frame the discussion for the following meeting.
 
-\section{Additional Components (optional)}
+For quick communication, the group uses Discord. A group was created where members share status updates and ask questions or request help from each other.
 
-\textcolor{red}{Instructions: Include additional components needed to manage your specific
-project. Possibilities include subcontractor management plans, security plans,
-training plans, hardware procurement plans, facilities plans, installation plans,
-cutover plans, and software maintenance plans.}
+A GitLab repository is used to efficiently manage, store, and update the project’s code.
+
+A Microsoft Teams workspace provides the group with a work environment where all project-related Word and Excel documents, including the 'Project Plan Template' and 'Project Timetable and Schedule (GANTT) Template,' are stored and updated. Teams also allow group members to comment on each other’s work and to work more collaboratively. Additionally, Meeting notes are stored in the Microsoft Teams workspace in Word document format.
+
+\section{Version Control}
+To ensure proper version control of the project code, we have created a private repository in Metropolia GitLab (REPLACE URL) . This enables us to manage and track the changes made to our project code effectively. By using a version control system, we can easily revert to previous versions if needed, collaborate on the code with other team members, and keep track of who made what changes. In addition, we have included a link to our GitLab repository in our project plan so that it is easily accessible to all project members. We have also added our project teacher as a co-operator to ensure that they can keep track of the progress of our code.
 
 
-\vspace{0.5cm}
-\textcolor{red}{If you don’t have any additional components, remove this section, or write: TBD
-(To be designed).}
+
+For other project-related materials, we have opted to store everything in our Microsoft Teams workspace. We have created subdirectories as needed to keep everything organized, including one for project-related information and material given to us by our teachers, another for useful reference material we find useful in our project, and a third for our own documents such as project plan, schedule, meeting notes, and project report. By storing everything in one place, we can easily access and share documents with other team members, and our project teacher can also easily monitor our progress.
+
+
+
+To keep track of the version control of our own documents, we have come up with a naming convention that includes the version number in the file name, such as "main\_v01.py". We also keep a changelog or version history document that tracks changes made to each document, including the date of the change, who made the change, and a brief description of the change. By doing so, we can easily keep track of changes made to documents and avoid confusion or errors. Overall, these practices ensure that our project is well\-organized, and all team members can easily access and manage project-related materials.
+
+\section{Schedule}
+This project has a timeline consisting of five stages, namely Discover, First stage, Second stage, Third stage, and Final release.
+
+The Discover stage is where the project requirements are understood, and plans are established. It will take place from January 9th to March 12th.
+
+
+
+During the First stage, specific project details will be determined, and the devices will be configured and tested. This stage is expected to be completed by early April.
+
+
+
+In the Second stage, the project content will be modified and updated based on the improvements identified in the First stage. This stage is expected to take place from early to mid-April.
+
+
+
+The Third stage is the final stage where the hardware product plan will be modified, reconfigured, and tested through the attempts made in the First and Second stages. This process is expected from mid-April to the end of April.
+
+%FIGURE?
+
+Finally, after going through these stages, the product will be released on May 5th with the Final release. The detailed schedule is subject to change and can be confirmed at the link provided below.
+
+REPLACE URL
+
+\section{Goals}
+Group201 aims to cultivate the following skills during this project:.
+
+
+
+First, we plan to utilize the knowledge gained in Hardware 1 to the fullest in order to produce the intended heart rate detection and analysis system. Based on the knowledge gained in the Network class, we plan to set up internet connections in real-world environments and utilize them for the operation of the product. We also hope to become more familiar with the command-line interface in Linux, which will help us to become more proficient in the emulation process. In addition, through the Hardware 2 course, we plan to understand programming for implementing hardware products by using micropython.
+
+
+
+Secondly, as IT majors, we hope to become familiar with the types of documentation suitable for the IT field. By writing various documents, we expect to learn the writing techniques for each document type.
+
+
+
+Lastly, since teamwork is a crucial aspect of IT projects, we hope to improve our communication skills and find effective communication methods while working as a team.
+
+
+
+Through the cultivation of these skills, we expect to achieve high-quality project results and receive full grades. To achieve this successful project performance, Group201 plans to go through the following plans.
+
+
+
+Firstly, we plan to periodically assign related tasks to each group member. Through regular task allocation and performance, we can quickly identify any shortcomings and, if necessary, seek the help of teachers to improve our skills.
+
+
+
+Also, to improve our IT documentation writing skills, we plan to update our documents whenever there are updates and use the memo function to leave feedback on each other's documents.
+
+
+
+This will enable us to complete more refined and professional documentation. Memo and feedback not only help with document writing but also aid in communication among team members. Various records left during the project will help all members of the team understand the progress of the project and identify each other's communication styles to make communication between team members smoother.
+
+
+%\begin{itemize}
+%\item The updated and detailed requirement specification
+%\item The project plan (this document)
+%\item Architecture and detailed design document (to be developed in the 4th period)
+%\item The proof-of-concept product (the product)
+%\item User's manual for the product
+%\item documented source codes.
+%\end{itemize}
+
 
 \end{document}
