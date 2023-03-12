@@ -61,27 +61,25 @@
 \newpage
 
 \begin{abstract}
-Write your abstract here.
+Group 201, a team of 1st-year students at Metropolia University of Applied Sciences, School of ICT, is developing a heart rate detection and analysis system using photoplethysmography (PPG) technology. The project's objectives include creating a user-friendly device for measuring heart rate and heart rate variability, connecting to Kubios Cloud HRV analysis service, and displaying estimated stress and recovery status indexes. The team plans to use various communication tools and methods to ensure good group communication and proper version control of project-related materials. The project is part of a course curriculum and scheduled to be completed by May 5th.
 \end{abstract}
 
 
 
 
-\begin{center}
-\textbf{\large Keywords:}
-\end{center}
 
 \vspace{1cm}
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|p{1cm}|p{4cm}|c|p{4cm}|}
+\begin{tabular}{|p{1cm}|p{5cm}|c|p{3.5cm}|}
 \hline
 \textbf{Ver} & \textbf{Description} & \textbf{Date} & \textbf{Author(s)} \\ \hline
 1.0 & Created structure for the project plan. Added instructions for what should be included in the various parts of the document.   & 31.1.2023 & Saana Vallius \\ \hline
 1.1 & Review meeting. Notes are shown with yellow.  & 6.2.2023 & Joseph Hotckiss,  Keijo Lanskinnas, Saana Vallius, Miguel Cheneuer, Sakari Lukkarinen \\ \hline
 1.2 & Updated commented parts according to what was decided in the review meeting. Changed the name of the document. & 7.3.2023 & Saana Vallius \\ \hline
 1.3 &  Removed mentions of adding teachers to Teams workspace. & 9.3.2023 & Saana Vallius \\ \hline
+1.4 &  Removed mentions of adding teachers to Teams workspace. & 11.3.2023 & Amir Ghari, Heejin Kim, Aleksi Merilainen, Eiaki Morooka \\ \hline
  &  &  &  \\ \hline
  &  &  &  \\ \hline
  &  &  &  \\ \hline
@@ -91,12 +89,14 @@ Write your abstract here.
 \label{table:version-history}
 \end{table}
 
+\begin{center}
+\textbf{\large Keywords:}
+\end{center}
 \begin{bf}
 \begin{center}
 \fbox{
 \parbox{0.8\textwidth}{
-Keyword 1\\ Keyword 2 \\ Keyword 3 \\
-...
+ Heart Monitor \\ Raspberry Pi Pico \\ Game
 }
 }
 \end{center}
@@ -109,16 +109,24 @@ Keyword 1\\ Keyword 2 \\ Keyword 3 \\
 \newpage
 
 \section{Introduction}
-This document is a project plan that details the development of a heart rate detection and analysis system by Group 1, a team of 1st year students at Metropolia University of Applied Sciences, School of ICT. The system will use photoplethysmography (PPG) technology to measure blood volume changes in the microvascular bed of tissue to determine a user's heart rate and heart rate variability (HRV). The plan covers the project's objectives, timeline, team roles, communication methods, and the hardware components used to build the system.
+
+This document is a project plan that details the development of a heart rate detection and analysis system by Group 201, a team of 1st year students at Metropolia University of Applied Sciences, School of ICT. The system will use photoplethysmography (PPG) technology to measure blood volume changes in the microvascular bed of tissue to determine a user's heart rate and heart rate variability (HRV). The plan covers the project's objectives, timeline, team roles, communication methods, and the hardware components used to build the system.
+
+
 
 The project aims to create a device that can be used in home or office environments by end-users or health and wellbeing professionals, such as physiotherapists, nurses, or medical doctors. The project is part of a course curriculum that involves utilizing the Raspberry Pi Pico microcontroller board and other components to develop a proof-of-concept for the recovery and stress meter.
 
+
+
 The development of the heart rate detection and analysis system focuses on five main objectives, including developing a heart rate detection algorithm, calculating HRV analysis, enabling the device to send, store, and read HRV data, building a connection to Kubios Cloud HRV analysis service, and developing a feature that shows estimated stress and recovery status indexes on the device.
+
+
 
 The project is scheduled to be completed by May 5th, following a timeline consisting of five stages, including Discover, First stage, Second stage, Third stage, and Final release. The team plans to cultivate various skills during this project, including utilizing the knowledge gained in Hardware 1 and Network classes, understanding programming for implementing hardware products by using Micropython, improving IT documentation writing skills, and improving communication skills. The team plans to use various communication tools and methods, including in-person and online meetings, Discord, GitLab, and Microsoft Teams, to ensure good group communication and proper version control of project-related materials.
 
 
-\subsection{Project Description}
+
+\section{Project Description}
 
 The project aims to create a heart rate detection and analysis system that utilizes photoplethysmography (PPG) technology to measure blood volume changes in the microvascular bed of tissue. By detecting changes in blood volume, the system can determine a user's heart rate and heart rate variability (HRV).
 
@@ -132,11 +140,7 @@ Second, the team will work on calculating HRV analysis using the data collected 
 
 
 
-
-
-
-
-Third, the team will enable the device to send, store, and read HRV data to/from a server. This will allow users to access their data from different devices and locations, as well as enable health and wellbeing professionals to remotely monitor their clients' HRV data.
+Third, the team will enable the device to send, store, and read HRV data to/from a server. This will allow users to access their data from different devices and locations and enable health and wellbeing professionals to remotely monitor their clients' HRV data.
 
 
 
@@ -147,27 +151,21 @@ Fourth, the team will build a connection to Kubios Cloud HRV analysis service. T
 Finally, the team will develop a feature that shows estimated stress and recovery status indexes on the device. This will enable users to monitor their stress levels and recovery status in real-time and adjust their lifestyle accordingly.
 
 
-
 The device is intended for use in home or office environments and can be used by end-users or health and wellbeing professionals such as physiotherapists, nurses, or medical doctors. The Raspberry Pi Pico microcontroller board and other components will be used to develop a proof-of-concept for the recovery and stress meter. The Raspberry Pi products are extensively supported by the manufacturers and by the user community, making them a suitable choice for this project.
 
-Figure 1 shows Raspberry Pi version….
 
 \begin{figure*}[h]
   \centering
-  \includegraphics[width=0.7\textwidth]{harrin_2017.png}
+  \includegraphics[width=0.7\textwidth]{raspi_heart.png}
   \caption{ Current Raspberry pi pico and its accessories.}
   \label{harrin}
 \end{figure*}
 
 
 
-\section{Hardware}
+\subsection{Hardware}
 
-To develop the heart rate detection and analysis system, the main hardware component being used is the Raspberry Pi Pico, which is a versatile microcontroller board designed for IoT devices. The board is small and adaptable to a wide range of applications in home, hobby, education, and industry. It has a rich set of peripherals, including SPI, I2C, and programmable I/O state machines for custom peripheral support. For this project, the board is programmable using MicroPython.
-
-
-
-
+To develop the heart rate detection and analysis system, the main hardware component being used is the Raspberry Pi Pico, which is a versatile microcontroller board designed for IoT (Internet of Things) devices. The board is small and adaptable to a wide range of applications in home, hobby, education, and industry. It has a rich set of peripherals, including SPI, I2C, and programmable I/O state machines for custom peripheral support. For this project, the board is programmable using MicroPython.
 
 
 
@@ -175,18 +173,35 @@ Additionally, there is a wireless version of the board, Raspberry Pi Pico W, whi
 
 
 
-The development board used in the project includes a rotary switch and knob, a 128x64 OLED display, 3 LEDs, and two of the three micro buttons for interacting with the board. The board is connected to a laptop or desktop via USB cable, and it includes 4-pin Grove-connectors for connecting serial communication devices such as I2C sensors or analog input sensors. The optical heart rate sensor is connected to one of the Grove-connectors and Pico’s ADC\_0 pin.
+The development board used in the project includes a rotary switch and knob, a 128x64 OLED display, 3 LEDs (Light emitting diodes), and two of the three micro buttons for interacting with the board. The board is connected to a laptop or desktop via USB cable, and it includes 4-pin Grove-connectors for connecting serial communication devices such as I2C sensors or analog input sensors. The optical heart rate sensor is connected to one of the Grove-connectors and Pico’s ADC\_0 pin.
 
 
 
-Overall, the Raspberry Pi Pico board and associated components provide a flexible and customizable platform for developing the heart rate detection and analysis system. A full list of the components used in the proof-of-concept product is provided in Table 1:
+Overall, the Raspberry Pi Pico board and associated components provide a flexible and customizable platform for developing the heart rate detection and analysis system. A full list of the components used in the proof-of-concept product is provided in Table 1. An image of the device is in image 1, and a block diagram is in image 2.
 
-% TABLE
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2cm}|p{5.5cm}|p{4cm}|}
+\hline
+\textbf{Components} & \textbf{Description} & \textbf{More Info} \\ \hline
+Raspberry Pi Pico & Dual-core ARM processor microcontroller having 246 kB SRAM and 2 MB on-board Flash. It also includes 2.4 GHz wireless LAN and 26 multifunction GPIO pins.    & Raspberry Pi Pico series – Raspberry Pi    \\ \hline
+Crowtail Pulse Sensor v2.0   & Optical heart rate sensor having LED (Light Emitting Diode), photodiode, analog amplifier, and analog signal output. Operating voltage 3-5 V  & Crowtail- Pulse Sensor 2.0 (elecrow.com)   \\ \hline
+OLED display   & SSD1306 compatible 128x64 monochrome organic LED-display. Communicates with I2C or UART-protocol.    & Sensors Modules SSD1306 Oled Display | Sensors Modules
+
+Using a SSD1306 OLED display — MicroPython latest documentation    \\ \hline
+Protoboard   & Passive protoboard specially designed for this project to help connect the other components to the Raspberry Pi Pico.   & Joseph Hotchkiss, Project Engineer, Metropolia UAS   \\ \hline
+Rotary knob  & Digital rotary knob with push button.    & Joseph Hotchkiss, Project Engineer, Metropolia UAS   \\ \hline
+\end{tabular}
+\caption{Components}
+\label{table:version-history}
+\end{table}
+
 
 
 \begin{figure*}[h]
   \centering
-  \includegraphics[width=0.7\textwidth]{harrin_2017.png}
+  \includegraphics[width=0.7\textwidth]{project_diagram.png}
   \caption{Block diagram of the device}
   \label{harrin}
 \end{figure*}
@@ -204,45 +219,36 @@ A GitLab repository is used to efficiently manage, store, and update the project
 A Microsoft Teams workspace provides the group with a work environment where all project-related Word and Excel documents, including the 'Project Plan Template' and 'Project Timetable and Schedule (GANTT) Template,' are stored and updated. Teams also allow group members to comment on each other’s work and to work more collaboratively. Additionally, Meeting notes are stored in the Microsoft Teams workspace in Word document format.
 
 \section{Version Control}
-To ensure proper version control of the project code, we have created a private repository in Metropolia GitLab (REPLACE URL) . This enables us to manage and track the changes made to our project code effectively. By using a version control system, we can easily revert to previous versions if needed, collaborate on the code with other team members, and keep track of who made what changes. In addition, we have included a link to our GitLab repository in our project plan so that it is easily accessible to all project members. We have also added our project teacher as a co-operator to ensure that they can keep track of the progress of our code.
+To ensure proper version control of the project code, we have created a private repository in Metropolia GitLab (https://gitlab.metropolia.fi/group201/heart-rate-monitor). This enables us to manage and track the changes made to our project code effectively. By using a version control system, we can easily revert to previous versions if needed, collaborate on the code with other team members, and keep track of who made what changes. In addition, we have included a link to our GitLab repository in our project plan so that it is easily accessible to all project members. We have also added our project teacher as a co-operator to ensure that they can keep track of the progress of our code.
 
 
 
 For other project-related materials, we have opted to store everything in our Microsoft Teams workspace. We have created subdirectories as needed to keep everything organized, including one for project-related information and material given to us by our teachers, another for useful reference material we find useful in our project, and a third for our own documents such as project plan, schedule, meeting notes, and project report. By storing everything in one place, we can easily access and share documents with other team members, and our project teacher can also easily monitor our progress.
 
-
-
-To keep track of the version control of our own documents, we have come up with a naming convention that includes the version number in the file name, such as "main\_v01.py". We also keep a changelog or version history document that tracks changes made to each document, including the date of the change, who made the change, and a brief description of the change. By doing so, we can easily keep track of changes made to documents and avoid confusion or errors. Overall, these practices ensure that our project is well\-organized, and all team members can easily access and manage project-related materials.
+To keep track of the version control of our own documents, we have produced a naming convention that includes the version number in the file name, such as "main\_v01.py". We also keep a changelog or version history document that tracks changes made to each document, including the date of the change, who made the change, and a brief description of the change. By doing so, we can easily keep track of changes made to documents and avoid confusion or errors. Overall, these practices ensure that our project is well-organized, and all team members can easily access and manage project-related materials.
 
 \section{Schedule}
+
 This project has a timeline consisting of five stages, namely Discover, First stage, Second stage, Third stage, and Final release.
 
 The Discover stage is where the project requirements are understood, and plans are established. It will take place from January 9th to March 12th.
 
-
-
 During the First stage, specific project details will be determined, and the devices will be configured and tested. This stage is expected to be completed by early April.
-
-
 
 In the Second stage, the project content will be modified and updated based on the improvements identified in the First stage. This stage is expected to take place from early to mid-April.
 
-
-
 The Third stage is the final stage where the hardware product plan will be modified, reconfigured, and tested through the attempts made in the First and Second stages. This process is expected from mid-April to the end of April.
-
-%FIGURE?
 
 Finally, after going through these stages, the product will be released on May 5th with the Final release. The detailed schedule is subject to change and can be confirmed at the link provided below.
 
-REPLACE URL
+
 
 \section{Goals}
-Group201 aims to cultivate the following skills during this project:.
+Group201 aims to cultivate the following skills during this project:
 
 
 
-First, we plan to utilize the knowledge gained in Hardware 1 to the fullest in order to produce the intended heart rate detection and analysis system. Based on the knowledge gained in the Network class, we plan to set up internet connections in real-world environments and utilize them for the operation of the product. We also hope to become more familiar with the command-line interface in Linux, which will help us to become more proficient in the emulation process. In addition, through the Hardware 2 course, we plan to understand programming for implementing hardware products by using micropython.
+First, we plan to utilize the knowledge gained in Hardware 1 to the fullest to produce the intended heart rate detection and analysis system. Based on the knowledge gained in the Network class, we plan to set up internet connections in real-world environments and utilize them for the operation of the product. We also hope to become more familiar with the command-line interface in Linux, which will help us to become more proficient in the emulation process. In addition, through the Hardware 2 course, we plan to understand programming for implementing hardware products by using micropython.
 
 
 
@@ -266,17 +272,7 @@ Also, to improve our IT documentation writing skills, we plan to update our docu
 
 
 
-This will enable us to complete more refined and professional documentation. Memo and feedback not only help with document writing but also aid in communication among team members. Various records left during the project will help all members of the team understand the progress of the project and identify each other's communication styles to make communication between team members smoother.
-
-
-%\begin{itemize}
-%\item The updated and detailed requirement specification
-%\item The project plan (this document)
-%\item Architecture and detailed design document (to be developed in the 4th period)
-%\item The proof-of-concept product (the product)
-%\item User's manual for the product
-%\item documented source codes.
-%\end{itemize}
+This will enable us to complete more refined and professional documentation. Memos and feedback not only help with documentation, but also aid in communication among team members. Records left during the project will help all members of the team understand the progress of the project and identify each other's communication styles to make communication between team members easier.
 
 
 \end{document}
